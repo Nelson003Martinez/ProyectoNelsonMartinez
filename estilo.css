@@ -1,0 +1,166 @@
+:root {
+    --Verde: #caffba;
+    --Gris: #bfbfbf;
+    --Negro: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+body h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Fondogris {
+    display: grid;
+    grid-template-areas: 
+        "perfil contacto";
+    width: 90%;
+    max-width: 844px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--Gris);
+    border: 2px solid black;
+}
+
+.Fondoverde {
+    background-color: var(--Verde);
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.Fondoperfil {
+    grid-area: perfil;
+    background-color: var(--Gris);
+    width: 100%;
+    max-width: 183px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenperfil img {
+    width: 100%;
+    max-width: 164px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.Nombre {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Nombre p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Contacto {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Contacto ul {
+    list-style: none;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.Contacto ul li {
+    margin-bottom: 5px;
+}
+
+.Contacto ul li a {
+    color: var(--Negro);
+    text-decoration: none;
+}
+
+.Contacto ul li a:hover {
+    text-decoration: underline;
+}
+
+.Contacto li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.Contacto img {
+    width: 30px;
+    height: 30px;
+}
+
+.hr-vertical {
+    width: 5px;
+    height: 100%;
+    background-color: black;
+}
+
+header {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--Verde);
+    padding: 20px;
+}
+
+header a {
+    color: var(--Negro);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    .Fondogris {
+        grid-template-areas:
+            "perfil"
+            "contacto";
+        gap: 20px;
+    }
+
+    .Fondoperfil,
+    .Contacto {
+        width: 100%;
+        max-width: none;
+    }
+}
+.btnDark{
+    background-color: var(--Verde);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    color: black;
+    box-shadow: 1px 1px 1px black;
+    position: fixed;
+    right: 30px;
+    top: 190px;
+    cursor: pointer;
+}
